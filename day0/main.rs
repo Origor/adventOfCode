@@ -6,10 +6,7 @@ fn part_a(input: &String) -> i32 {
 
     let mut increased_counter = 0;
     for (index, item) in vector.iter().enumerate() {
-        //println!("Element at position {}: {:?}", index, item);
-        if index == 0 {
-
-        } else if item > &vector[index - 1] {
+        if index != 0 && item > &vector[index - 1] {
             increased_counter += 1;
         }
     }
@@ -21,8 +18,7 @@ fn part_b(input: &String) -> i32 {
 
     let mut increased_counter = 0;
     for (index, item) in vector.iter().enumerate() {
-        if index < 3 {} 
-        else if item > &vector[index - 3] {
+        if index >= 3 && item > &vector[index - 3] {
             increased_counter += 1;
         }
     }
@@ -34,8 +30,7 @@ fn part_c(input: &String, window: usize) -> i32 {
 
     let mut increased_counter = 0;
     for (index, item) in vector.iter().enumerate() {
-        if index < window {} 
-        else if item > &vector[index - window] {
+        if index >= window && item > &vector[index - window] {
             increased_counter += 1;
         }
     }
