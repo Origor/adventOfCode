@@ -1,0 +1,13 @@
+# Ignore target directory
+target/
+
+# Ignore build artifacts
+*.o
+*.exe
+
+# Ignore logs
+*.log
+
+# Ignore dependency caches
+*/.cargo/*
+*/node_modules
