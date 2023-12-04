@@ -40,6 +40,7 @@ fn split_string_to_digits(to_parse: &str) -> Option<Vec<char>> {
     let mut char_vec: Vec<char> = Vec::new();
     let regexp = Regex::new(r"(\d|one|two|three|four|five|six|seven|eight|nine)").unwrap();
 
+    dbg!("to_parse: {}", &to_parse);
     // using find_iter() instead of captures() because captures is mainly used for regex with groups
     for capture in regexp.find_iter(to_parse) {
         dbg!("capture: {}", &capture);
